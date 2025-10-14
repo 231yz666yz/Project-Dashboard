@@ -10,6 +10,7 @@ from pymongo import MongoClient
 
 load_dotenv()
 
+
 #Postgres schema helper
 PG_SCHEMA = os.getenv("PG_SCHEMA", "public")   # CHANGE: "public" to your own schema name
 def qualify(sql: str) -> str:
