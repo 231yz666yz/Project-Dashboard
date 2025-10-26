@@ -10,8 +10,8 @@ from pymongo import MongoClient
 # Load environment variables
 load_dotenv()
 
-PG_SCHEMA = os.getenv("PG_SCHEMA", "public")
-
+#Postgres schema helper
+PG_SCHEMA = os.getenv("PG_SCHEMA", "public")   # CHANGE: "public" to your own schema name
 def qualify(sql: str) -> str:
     """Replace schema placeholder {S} with actual schema name"""
     return sql.replace("{S}.", f"{PG_SCHEMA}.")
